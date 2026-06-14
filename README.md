@@ -4,9 +4,9 @@ Arch Linux PKGBUILD for [Astah UML](https://astah.net/) 11.0.0. Unofficial, loca
 
 ## Prerequisites
 
-- `base-devel` package group
-- `java-runtime` (JRE 17 or compatible)
-- `unzip`
+```bash
+sudo pacman -S --needed base-devel jre-openjdk unzip
+```
 
 ## Install
 
