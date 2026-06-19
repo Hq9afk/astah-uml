@@ -29,10 +29,21 @@ EOF
   cat > "$pkgdir/usr/share/applications/$pkgname.desktop" <<EOF
 [Desktop Entry]
 Name=Astah UML
-Exec=$pkgname
+Exec=$pkgname %f
 Icon=$pkgname
 Type=Application
 Categories=Development;
 Terminal=false
+MimeType=application/x-asta;
+EOF
+
+  install -Dm644 /dev/stdin "$pkgdir/usr/share/mime/packages/$pkgname.xml" <<EOF
+<?xml version="1.0"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-asta">
+    <comment>Astah UML file</comment>
+    <glob pattern="*.asta"/>
+  </mime-type>
+</mime-info>
 EOF
 }
