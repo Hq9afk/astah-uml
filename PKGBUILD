@@ -6,10 +6,8 @@ pkgdesc="UML diagramming tool by Change Vision"
 arch=('any')
 url="https://astah.net/"
 license=('custom')
-depends=('java-runtime')
-source=("${pkgname}-${pkgver}.zip::https://members.change-vision.com/old/files/_tDNnBRcGKJLvUYn0XavcPEj5LfwPeFpS/astah_UML/11_0_0/astah-uml-11_0_0-ba221e.zip")
-# Official MD5 (from https://members.change-vision.com/old/files/astah_UML/11_0_0):
-#   974d8a7ce91d0405e1068fd7cea3bd83
+depends=('jdk-openjdk')
+source=("${pkgname}-${pkgver}.zip")
 sha256sums=('9bd1093e27826df8e1ef8906d0b7127fa6d91c0833ec397d4613b79bc46c701a')
 
 package() {
